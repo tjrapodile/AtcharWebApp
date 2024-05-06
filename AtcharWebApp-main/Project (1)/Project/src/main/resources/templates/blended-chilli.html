@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blended Chilli Sauce</title>
+    <!-- Link to your existing stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Additional styling if needed -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/img/Chilli/picture5.jpg'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #blended-chilli {
+            padding: 80px 0; /* Adjust padding as needed */
+            text-align: center; /* Center the content vertically */
+            color: white; /* Set text color to white for better visibility */
+        }
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            padding: 30px;
+            border-radius: 30px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<!-- Header and Navigation if needed -->
+<!-- Replace this with the necessary code -->
+
+<!-- Main Content -->
+<main id="main">
+    <section id="blended-chilli" class="menu-item">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Picture of the chilli sauce
+                    <img src="assets/img/Chilli/picture1.jpg" class="menu-img" alt="Blended Chilli Sauce"> -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="menu-content">
+                        <h2>Blended Chilli Sauce</h2>
+                        <!-- Dropdown menu to choose the size -->
+                        <select id="size-select">
+                            <option value="450">450g - R40</option>
+                            <option value="500">500g - R50</option>
+                            <option value="750">750g - R80</option>
+                            <option value="5000">5L - R500</option>
+                        </select>
+                        <!-- Display the selected price -->
+                        <p id="price-display">Price: R40</p>
+                        <!-- Add to Cart button -->
+                        <button id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer if needed -->
+<!-- Replace this with the necessary code -->
+
+<!-- Script to update the price based on selected size -->
+<script>
+    const sizeSelect = document.getElementById('size-select');
+    const priceDisplay = document.getElementById('price-display');
+
+    sizeSelect.addEventListener('change', () => {
+        const selectedSize = sizeSelect.value;
+        let price = 0;
+
+        switch (selectedSize) {
+            case '450':
+                price = 40;
+                break;
+            case '500':
+                price = 50;
+                break;
+            case '750':
+                price = 80;
+                break;
+            case '5000':
+                price = 500;
+                break;
+            default:
+                price = 0;
+        }
+
+        priceDisplay.textContent = `Price: R${price}`;
+    });
+</script>
+</body>
+</html>
